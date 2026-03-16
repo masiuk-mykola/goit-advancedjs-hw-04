@@ -7,6 +7,9 @@ A vanilla JavaScript image search application built with Vite. Search for photos
 - Search images by keyword via the Pixabay API
 - Gallery with lightbox (SimpleLightbox) for full-size preview
 - Per-image stats: likes, views, comments, downloads
+- Load More button with paginated results (15 images per page)
+- Smooth scroll after each "Load More" action
+- Hides "Load More" when all results are loaded
 - Loading state indicator
 - Error notifications via iziToast
 
@@ -64,4 +67,4 @@ The production build deploys automatically to GitHub Pages via GitHub Actions on
 npm run build
 ```
 
-Live demo: [https://mykolamasiuk.github.io/goit-advancedjs-hw-03/](https://mykolamasiuk.github.io/goit-advancedjs-hw-03/)
+Live demo: [https://mykolamasiuk.github.io/goit-advancedjs-hw-04/](https://mykolamasiuk.github.io/goit-advancedjs-hw-04/)
