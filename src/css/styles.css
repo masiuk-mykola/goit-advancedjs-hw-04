@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+
+.gallery {
+  position: relative;
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 24px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  min-height: 100px;
+}
+
+.gallery__item {
+  position: relative;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__item:hover {
+  box-shadow:
+    0px 2px 4px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 2px -1px rgba(0, 0, 0, 0.12);
+  border: 1px solid blueviolet;
+}
+
+.gallery__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.gallery__link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.caption-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4px 20px;
+}
+
+.caption-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery.loading {
+  opacity: 0.8;
+  pointer-events: none;
+  height: 100vh;
+}
+
+.gallery.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
+  border: 5px solid #121eff;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+input {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 4%;
+}
+
+button {
+  border-radius: 8px;
+  padding: 9px 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 4%;
+  background: #4e75ff;
+  color: #fff;
+  border: none;
+}
+
+.caption {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 4%;
+}
+
+.caption-value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 4%;
+}
